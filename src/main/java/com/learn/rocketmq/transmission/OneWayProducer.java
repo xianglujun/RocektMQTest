@@ -1,4 +1,4 @@
-package com.learn.rocketmq.producer;
+package com.learn.rocketmq.transmission;
 
 import com.learn.rocketmq.constant.MqConstants;
 import org.apache.rocketmq.client.exception.MQBrokerException;

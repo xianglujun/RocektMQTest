@@ -1,4 +1,4 @@
-package com.learn.rocketmq.producer;
+package com.learn.rocketmq.transmission;
 
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
@@ -28,7 +28,7 @@ public class SyncProducer {
         // 启动实例
         try {
             producer.setNamesrvAddr(nameSrvAddr);
-//            producer.setCreateTopicKey("TopicTest");
+//            transmission.setCreateTopicKey("TopicTest");
             producer.start();
         } catch (MQClientException e) {
             e.printStackTrace();
