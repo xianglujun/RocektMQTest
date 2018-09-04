@@ -20,7 +20,7 @@ public class OrderedConsumer {
 
     public static void main(String[] args) throws MQClientException {
         final DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("OrderedProducerGroupName");
-        consumer.subscribe("TopicTest", "TagA || TagC || TagD");
+        consumer.subscribe("TopicTestOrdered", "TagA || TagC || TagD");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         consumer.setNamesrvAddr(MqConstants.MQ_NAME_SRV_ADDRESS);
 
@@ -47,6 +47,6 @@ public class OrderedConsumer {
         });
 
         consumer.start();
-        System.out.println("Consumer Started %n");
+        System.out.printf("Consumer Started %n");
     }
 }
